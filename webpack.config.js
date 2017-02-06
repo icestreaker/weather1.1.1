@@ -1,18 +1,21 @@
 var webpack = require("webpack");
+var HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry : "./Public/src/index.js",
+
   output : {
-    path : "./build",
+    path : __dirname + "build",
     filename : "bundle.js",
-    publicPath : "Public"
+    libraryTarget: "umd"
   },
+
   module : {
     loaders : [
       {
         test : /\.js$/,
         exclude : /(node_modules)/,
-        loader : ["babel-loader"],
+        loader : ["babel-loader"]
       },
       {
         test : /\.css$/,
@@ -21,9 +24,17 @@ module.exports = {
       }
     ]
   },
-  devServer : {
-    port : 3000,
-    contentBase : "./build",
-    inline : true
-  }
+
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: __dirname + "/Public/index.html"
+    })
+  ],
+
+  // devServer : {
+  //   colors: true,
+  //   historyApiFallback: true,
+  //   inline: true,
+  //   hot: true
+  // }
 }

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "Public";
+/******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 262);
@@ -11555,8 +11555,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./../../../node_modules/css-loader/index.js!./styles.css", function() {
-			var newContent = require("!!./../../../node_modules/css-loader/index.js!./styles.css");
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./styles.css", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./styles.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -12778,7 +12778,7 @@ exports = module.exports = __webpack_require__(133)();
 
 
 // module
-exports.push([module.i, ".td, .th {\r\n  vertical-align: middle !important;\r\n  text-align: center !important;\r\n}\r\n\r\n.inport-group {\r\n  margin: 10px 0px;\r\n}\r\n\r\nsvg {\r\n  height: 150px;\r\n}\r\n\r\ntd:first-of-type, td:first-of-type > div {\r\n  height: 200px;\r\n  width: 250px;\r\n}\r\n", ""]);
+exports.push([module.i, ".td, .th {\r\n  vertical-align: middle !important;\r\n  text-align: center !important;\r\n}\r\n\r\n.import-group {\r\n  margin: 20px 5px;\r\n}\r\n\r\nsvg {\r\n  height: 150px;\r\n}\r\n\r\ntd:first-of-type, td:first-of-type > div {\r\n  height: 200px;\r\n  width: 250px;\r\n}\r\n", ""]);
 
 // exports
 
