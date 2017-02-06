@@ -1,21 +1,29 @@
+var webpack = require("webpack");
+
 module.exports = {
-  entry : ['babel-polyfill','./Public/src'],
+  entry : "./Public/src/index.js",
   output : {
-    path : './build',
-    filename : 'bundle.js'
+    path : "./build",
+    filename : "bundle.js",
+    publicPath : "Public"
   },
   module : {
     loaders : [
       {
         test : /\.js$/,
-        loader : 'babel-loader',
-        exclude : /node_modules/
+        exclude : /(node_modules)/,
+        loader : ["babel-loader"],
+      },
+      {
+        test : /\.css$/,
+        exclude : /(node_modules)/,
+        loader : "style-loader!css-loader"
       }
     ]
   },
   devServer : {
     port : 3000,
-    contentBase : './build',
+    contentBase : "./build",
     inline : true
   }
 }
