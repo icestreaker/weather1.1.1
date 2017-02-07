@@ -4,8 +4,8 @@
   "description": "Gives weather forecasts",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress",
-    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
+    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "node ./src/app.js"
   },
   "author": "James Warren Basham",
   "license": "ISC",
@@ -29,7 +29,9 @@
     "static-site-generator-webpack-plugin": "^3.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-hot-middleware": "^2.16.1"
   },
   "dependencies": {
     "axios": "^0.15.3",
