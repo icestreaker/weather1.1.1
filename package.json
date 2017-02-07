@@ -4,8 +4,8 @@
   "description": "Gives weather forecasts",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --progress",
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
   },
   "author": "James Warren Basham",
   "license": "ISC",
